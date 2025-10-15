@@ -1,0 +1,48 @@
+{
+  "name": "tailwindui-template",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "browserslist": "defaults, not ie <= 11",
+  "dependencies": {
+    "@emailjs/browser": "^3.12.1",
+    "@headlessui/react": "^1.7.19",
+    "@mapbox/rehype-prism": "^0.8.0",
+    "@mdx-js/loader": "^2.3.0",
+    "@mdx-js/react": "^2.3.0",
+    "@next/mdx": "^13.5.8",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/typography": "^0.5.15",
+    "@vercel/analytics": "^1.5.0",
+    "autoprefixer": "^10.4.20",
+    "clsx": "^1.2.1",
+    "fast-glob": "^3.3.2",
+    "feed": "^4.2.2",
+    "focus-visible": "^5.2.1",
+    "framer-motion": "^7.10.3",
+    "mui": "^0.0.1",
+    "next": "^13.5.8",
+    "postcss-focus-visible": "^6.0.4",
+    "prop-types": "^15.8.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.12.0",
+    "react-slick": "^0.30.3",
+    "remark-gfm": "^3.0.1",
+    "slick-carousel": "^1.8.1",
+    "tailwindcss": "^3.4.17"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^13.5.8",
+    "prettier": "^2.8.8",
+    "prettier-plugin-tailwindcss": "^0.1.13"
+  }
+}

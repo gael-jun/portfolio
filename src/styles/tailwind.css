@@ -1,0 +1,36 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import './prism.css';
+@import 'tailwindcss/utilities';
+
+
+.custom-img {
+  background: rgb(2, 48, 71);
+  background: linear-gradient(0deg, rgba(2, 48, 71, 1) 0%, rgba(33, 158, 188, 1) 100%);
+}
+
+.loader {
+  border-top-color: #3498db; /* Change this color to match your theme */
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Carrousel Styling */
+.slick-dots {
+  bottom: -25px;
+}
+.slick-dots li button:before {
+  font-size: 10px;
+  color: gray;
+}
+.slick-dots li.slick-active button:before {
+  color: black;
+}

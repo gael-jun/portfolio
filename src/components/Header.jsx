@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useRef } from 'react'
+import { Fragment, useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
@@ -37,7 +37,7 @@ MobileNavItem.propTypes = {
 function MobileNavigation(props) {
   return (
     <Popover {...props}>
-      <Popover.Button className="flex items-center px-4 py-2 text-sm font-medium rounded-full shadow-lg group bg-white/90 text-primaryText-800 shadow-primaryText-800/5 ring-1 ring-primaryText-900/5 backdrop-blur dark:bg-primaryText-800/90 dark:text-primaryText-200 dark:ring-white/10 dark:hover:ring-white/20">
+  <Popover.Button className="flex items-center px-4 py-2 text-sm font-medium rounded-full shadow-lg group bg-white/60 hover:bg-white/90 text-primaryText-800 shadow-primaryText-800/5 ring-1 ring-black/10 hover:ring-black/20 backdrop-blur-md transition-colors dark:bg-slate-900/50 dark:hover:bg-slate-900/80 dark:text-primaryText-200 dark:ring-white/10 dark:hover:ring-white/20">
         Menu
         <ChevronDownIcon className="w-2 h-auto ml-3 stroke-primaryText-500 group-hover:stroke-primaryText-700 dark:group-hover:stroke-primaryText-400" />
       </Popover.Button>
@@ -64,7 +64,7 @@ function MobileNavigation(props) {
         >
           <Popover.Panel
             focus
-            className="fixed z-50 p-8 origin-top bg-white inset-x-4 top-8 rounded-3xl ring-1 ring-primaryText-900/5 dark:bg-primaryText-900 dark:ring-primaryText-800"
+            className="fixed z-50 p-8 origin-top bg-white inset-x-4 top-8 rounded-3xl ring-1 ring-black/5 dark:bg-slate-900 dark:ring-white/10"
           >
             <div className="flex flex-row-reverse items-center justify-between">
               <Popover.Button aria-label="Close menu" className="p-1 -m-1">
@@ -125,7 +125,7 @@ NavItem.propTypes = {
 function DesktopNavigation(props) {
   return (
     <nav {...props}>
-      <ul className="flex px-3 text-sm font-medium rounded-full shadow-lg bg-white/90 text-primaryText-800 shadow-primaryText-800/5 ring-1 ring-primaryText-900/5 backdrop-blur dark:bg-primaryText-800/90 dark:text-primaryText-200 dark:ring-white/10">
+  <ul className="flex px-3 text-sm font-medium rounded-full shadow-lg bg-white/60 hover:bg-white/90 text-primaryText-800 shadow-primaryText-800/5 ring-1 ring-black/10 hover:ring-black/20 backdrop-blur-md transition-colors dark:bg-slate-900/50 dark:hover:bg-slate-900/80 dark:text-primaryText-200 dark:ring-white/10 dark:hover:ring-white/20">
         {siteMetadata.siteNavLinks.map((link) => {
           return (
             <NavItem key={link.href} href={link.href}>
@@ -165,7 +165,7 @@ function ModeToggle() {
     <button
       type="button"
       aria-label="Toggle dark mode"
-      className="px-3 py-2 transition rounded-full shadow-lg group bg-white/90 shadow-primaryText-800/5 ring-1 ring-primaryText-900/5 backdrop-blur dark:bg-primaryText-800/90 dark:ring-white/10 dark:hover:ring-white/20"
+      className="px-3 py-2 transition rounded-full shadow-lg group bg-white/60 hover:bg-white/90 shadow-primaryText-800/5 ring-1 ring-black/10 hover:ring-black/20 backdrop-blur-md dark:bg-slate-900/50 dark:hover:bg-slate-900/80 dark:ring-white/10 dark:hover:ring-white/20"
       onClick={toggleMode}
     >
       <SunIcon className="h-6 w-6 fill-primaryText-100 stroke-primaryText-500 transition group-hover:fill-primaryText-200 group-hover:stroke-primaryText-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-accent-50 [@media(prefers-color-scheme:dark)]:stroke-accent-500 [@media(prefers-color-scheme:dark)]:group-hover:fill-accent-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-accent-600" />
@@ -231,8 +231,27 @@ export function Header() {
   let headerRef = useRef()
   let avatarRef = useRef()
   let isInitial = useRef(true)
+  const [enableScrollEffects, setEnableScrollEffects] = useState(false)
 
   useEffect(() => {
+    // Disable dynamic scroll effects: keep only the fixed navbar
+    setEnableScrollEffects(false)
+  }, [isHomePage])
+
+  useEffect(() => {
+    if (!enableScrollEffects) {
+      // Ensure any CSS vars are cleared so static layout is used
+      document.documentElement.style.removeProperty('--header-position')
+      document.documentElement.style.removeProperty('--header-height')
+      document.documentElement.style.removeProperty('--header-mb')
+      document.documentElement.style.removeProperty('--header-inner-position')
+      document.documentElement.style.removeProperty('--header-top')
+      document.documentElement.style.removeProperty('--avatar-top')
+      document.documentElement.style.removeProperty('--avatar-image-transform')
+      document.documentElement.style.removeProperty('--avatar-border-transform')
+      document.documentElement.style.removeProperty('--avatar-border-opacity')
+      return
+    }
     let downDelay = avatarRef.current?.offsetTop ?? 0
     let upDelay = 64
 
@@ -294,8 +313,7 @@ export function Header() {
       let scrollY = downDelay - window.scrollY
 
       let scale = (scrollY * (fromScale - toScale)) / downDelay + toScale
-      scale = scrollHeight(scale, fromScale, toScale)
-      console.log({ scale })
+  scale = scrollHeight(scale, fromScale, toScale)
 
       let x = (scrollY * (fromX - toX)) / downDelay + toX
       x = scrollHeight(x, fromX, toX)
@@ -319,65 +337,39 @@ export function Header() {
       isInitial.current = false
     }
 
+    // Throttle updates to animation frame to avoid layout thrash
+    let rafId = null
+    function onScrollOrResize() {
+      if (rafId != null) return
+      rafId = window.requestAnimationFrame(() => {
+        updateStyles()
+        rafId = null
+      })
+    }
+
     updateStyles()
-    window.addEventListener('scroll', updateStyles, { passive: true })
-    window.addEventListener('resize', updateStyles)
+    window.addEventListener('scroll', onScrollOrResize, { passive: true })
+    window.addEventListener('resize', onScrollOrResize)
 
     return () => {
-      window.removeEventListener('scroll', updateStyles, { passive: true })
-      window.removeEventListener('resize', updateStyles)
+      window.removeEventListener('scroll', onScrollOrResize, { passive: true })
+      window.removeEventListener('resize', onScrollOrResize)
     }
-  }, [isHomePage])
+  }, [isHomePage, enableScrollEffects])
 
   return (
     <>
       <header
-        className="relative z-50 flex flex-col pointer-events-none sticky top-0"
-        style={{
-          height: 'var(--header-height)',
-          marginBottom: 'var(--header-mb)',
-        }}
+        className="fixed inset-x-0 top-0 z-50 flex flex-col pointer-events-none"
       >
-        {isHomePage && (
-          <>
-            <div
-              ref={avatarRef}
-              className="order-last mt-[calc(theme(spacing.16)-theme(spacing.3))]"
-            />
-            <Container
-              className="top-0 order-last pt-3 -mb-3"
-              style={{ position: 'var(--header-position)' }}
-            >
-              <div
-                className="top-[var(--avatar-top,theme(spacing.3))] w-full"
-                style={{ position: 'var(--header-inner-position)' }}
-              >
-                <div className="relative">
-                  <AvatarContainer
-                    className="absolute left-0 transition-opacity origin-left top-3"
-                    style={{
-                      opacity: 'var(--avatar-border-opacity, 0)',
-                      transform: 'var(--avatar-border-transform)',
-                    }}
-                  />
-                  <Avatar
-                    large
-                    className="block w-16 h-16 origin-left"
-                    style={{ transform: 'var(--avatar-image-transform)' }}
-                  />
-                </div>
-              </div>
-            </Container>
-          </>
-        )}
+        {/* Homepage large avatar removed: only navbar remains fixed */}
         <div
           ref={headerRef}
           className="top-0 z-10 h-16 pt-6"
-          style={{ position: 'var(--header-position)' }}
         >
           <Container
             className="top-[var(--header-top,theme(spacing.6))] w-full"
-            style={{ position: 'var(--header-inner-position)' }}
+            style={enableScrollEffects ? { position: 'var(--header-inner-position)' } : undefined}
           >
             <div className="relative flex gap-4">
               <div className="flex flex-1">
@@ -400,7 +392,7 @@ export function Header() {
           </Container>
         </div>
       </header>
-      {isHomePage && <div style={{ height: 'var(--content-offset)' }} />}
+  {/* Removed sticky-layout spacer; fixed header no longer needs it */}
     </>
   )
 }

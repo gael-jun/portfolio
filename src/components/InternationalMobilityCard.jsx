@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Image from 'next/image';
 
 const InternationalMobilityCard = ({ location }) => {
@@ -26,8 +27,8 @@ const InternationalMobilityCard = ({ location }) => {
         </div>
       </div>
 
-      {/* Description de la localisation */}
-      <div className="absolute bottom-0 left-0 right-0 bg-white p-4 rounded-b-lg shadow-lg">
+  {/* Description de la localisation */}
+  <div className="absolute bottom-0 left-0 right-0 bg-white dark:bg-slate-900 p-4 rounded-b-lg shadow-lg ring-1 ring-black/5 dark:ring-white/10">
         <h4 className="font-semibold text-lg text-primaryText-800 dark:text-primaryText-100">
           About {location.city}
         </h4>
@@ -37,6 +38,17 @@ const InternationalMobilityCard = ({ location }) => {
       </div>
     </div>
   );
+};
+
+InternationalMobilityCard.propTypes = {
+  location: PropTypes.shape({
+    image: PropTypes.string.isRequired,
+    city: PropTypes.string.isRequired,
+    country: PropTypes.string.isRequired,
+    startDate: PropTypes.string,
+    endDate: PropTypes.string,
+    description: PropTypes.string,
+  }).isRequired,
 };
 
 export default InternationalMobilityCard;

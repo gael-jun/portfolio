@@ -7,14 +7,11 @@ const Testimonial = () => {
       <div className="pb-16 bg-fixed bg-center bg-cover bg-gradient-to-b from-gradientStart-500 to-gradientEnd-500 dark:from-gradientStart-700 dark:to-gradientEnd-900 lg:relative lg:z-10 lg:pb-0">
         <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-8 lg:px-8">
           <div className="relative lg:-my-8">
-            <div
-              aria-hidden="true"
-              className="absolute inset-x-0 top-0 bg-white h-1/2 dark:bg-black lg:hidden"
-            />
+            {/* Removed mobile overlay that caused partial black background on small screens */}
             <div className="max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:h-full lg:p-0">
               <div className="overflow-hidden shadow-xl aspect-w-10 aspect-h-6 rounded-xl sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full">
                 <Image
-                  className="object-cover lg:h-full lg:w-full"
+                  className="object-cover object-top lg:object-center lg:h-full lg:w-full"
                   src={siteMetadata.testimonial.imgUrl}
                   alt="testimonials"
                   width={500}

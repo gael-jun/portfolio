@@ -7,7 +7,7 @@ const siteMetadata = {
   author: 'Tonde Ndebia Junior Gael',
   authorHeadline: 'Final year Information Systems Engineering student | Master Degree in Artificial intelligence at ENSIMAG',
   authorAbout:
-    "Hi, I'm Junior Gael, a computer science student focusing on AI. I enjoy building intelligent systems and solving real problems with data and code.",
+    "Hi, I'm Junior Gael, a computer science student focusing on AI. I enjoy building intelligent systems and solving real problems with data and code. I am currently seeking a 6‑month end‑of‑studies internship in Artificial Intelligence starting February 2026.",
   authorAboutExtended:
     "Currently studying at ENSIMAG, I focus on AI and its applications. I’m passionate about tackling practical projects, learning new tools, and collaborating to deliver meaningful impact.",
   socials: {
@@ -19,6 +19,8 @@ const siteMetadata = {
   },
   email: 'ndebiagaeljunior@gmail.com',
   phoneNumber: '0759519289',
+  location: 'Grenoble, France',
+  mobilityNote: 'Available across France and the EU',
   contactTitle: 'Get in touch',
   contactSubtitle:
     "I am currently studying computer science and working on exciting projects in AI. If you want to get in touch, please use the form below.",
@@ -104,7 +106,7 @@ const siteMetadata = {
   ],
   testimonial: {
     comment:
-      '« Je recommande vivement M. TONDE NDEBIA pour toute opportunité future, convaincu qu’il saura s’investir avec la même rigueur, la même efficacité et le même enthousiasme que ceux dont il a fait preuve au cours de son stage. Veuillez agréer, Madame, Monsieur, l’expression de mes salutations distinguées. »',
+      '« Je recommande vivement M. TONDE NDEBIA pour toute opportunité future, convaincu qu’il saura s’investir avec la même rigueur, la même efficacité et le même enthousiasme que ceux dont il a fait preuve au cours de son stage.»',
     author: 'Anthony CAMATCHY, E-AUBONNE\'s CEO',
     authorTitle: 'My internship supervisor at E-Aubonne',
   imgUrl: '/images/avatar.jpg',

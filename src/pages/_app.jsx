@@ -1,4 +1,6 @@
 import { useEffect, useRef } from 'react'
+import { useRouter } from 'next/router'
+import PropTypes from 'prop-types'
 
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
@@ -18,7 +20,8 @@ function usePrevious(value) {
   return ref.current
 }
 
-export default function App({ Component, pageProps, router }) {
+export default function App({ Component, pageProps }) {
+  const router = useRouter()
   let previousPathname = usePrevious(router.pathname)
 
   return (
@@ -26,10 +29,10 @@ export default function App({ Component, pageProps, router }) {
       <Preloader />
       <div className="fixed flex justify-center sm:px-8">
         <div className="flex w-full max-w-7xl lg:px-8">
-          <div className="w-full bg-white ring-1 ring-primaryText-100 dark:bg-primaryText-900 dark:ring-primaryText-300/20" />
+          <div className="w-full bg-transparent ring-1 ring-transparent dark:bg-transparent dark:ring-transparent" />
         </div>
       </div>
-      <div className="flex flex-col justify-between h-screen">
+      <div className="flex flex-col justify-between min-h-screen pt-24">
         <Header />
 
         <main>
@@ -39,4 +42,9 @@ export default function App({ Component, pageProps, router }) {
       </div>
     </>
   )
+}
+
+App.propTypes = {
+  Component: PropTypes.elementType.isRequired,
+  pageProps: PropTypes.object,
 }

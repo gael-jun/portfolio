@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import clsx from 'clsx'
 import { motion } from 'framer-motion'
+import PropTypes from 'prop-types'
 
 function ChevronRightIcon(props) {
   return (
@@ -25,19 +26,25 @@ export function Card({ as: Component = 'div', className, children }) {
         className={clsx(
           className,
           'group relative flex flex-col items-start p-8 overflow-hidden',
-          'bg-white dark:bg-primaryText-900/40',
+          'bg-white dark:bg-slate-900',
           'rounded-2xl backdrop-blur-sm',
-          'border border-primaryText-200/50 dark:border-primaryText-700/50',
+          'ring-1 ring-black/5 dark:ring-white/10',
           'shadow-[0_0_0_1px_rgba(0,0,0,0.03),0_2px_4px_rgba(0,0,0,0.05),0_12px_24px_rgba(0,0,0,0.05)]',
-          'dark:shadow-[0_0_0_1px_rgba(255,255,255,0.1),0_2px_4px_rgba(0,0,0,0.2),0_12px_24px_rgba(0,0,0,0.2)]',
+          'dark:shadow-none',
           'transform-gpu transition-all duration-300'
         )}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-primaryText-100/0 via-primaryText-100/0 to-primaryText-100/20 dark:from-primaryText-800/0 dark:via-primaryText-800/0 dark:to-primaryText-800/20" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primaryText-100/0 via-primaryText-100/0 to-primaryText-100/15 dark:from-white/0 dark:via-white/0 dark:to-white/5" />
         {children}
       </Component>
     </motion.div>
   )
+}
+
+Card.propTypes = {
+  as: PropTypes.elementType,
+  className: PropTypes.string,
+  children: PropTypes.node,
 }
 
 Card.Link = function CardLink({ children, ...props }) {
@@ -58,6 +65,10 @@ Card.Link = function CardLink({ children, ...props }) {
   )
 }
 
+Card.Link.propTypes = {
+  children: PropTypes.node,
+}
+
 Card.Title = function CardTitle({ as: Component = 'h2', href, children }) {
   return (
     <Component className="relative text-xl font-bold tracking-tight text-primaryText-900 dark:text-primaryText-100 transition-colors duration-300 group-hover:text-accent-500 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-accent-500 after:transition-all after:duration-300 group-hover:after:w-full">
@@ -66,12 +77,22 @@ Card.Title = function CardTitle({ as: Component = 'h2', href, children }) {
   )
 }
 
+Card.Title.propTypes = {
+  as: PropTypes.elementType,
+  href: PropTypes.string,
+  children: PropTypes.node,
+}
+
 Card.Description = function CardDescription({ children }) {
   return (
     <p className="relative z-10 mt-4 text-base leading-7 text-primaryText-600 dark:text-primaryText-400 transition-colors duration-300 group-hover:text-primaryText-700 dark:group-hover:text-primaryText-300">
       {children}
     </p>
   )
+}
+
+Card.Description.propTypes = {
+  children: PropTypes.node,
 }
 
 Card.Cta = function CardCta({ children }) {
@@ -91,6 +112,10 @@ Card.Cta = function CardCta({ children }) {
       </motion.div>
     </motion.div>
   )
+}
+
+Card.Cta.propTypes = {
+  children: PropTypes.node,
 }
 
 Card.Eyebrow = function CardEyebrow({
@@ -130,6 +155,13 @@ Card.Eyebrow = function CardEyebrow({
   )
 }
 
+Card.Eyebrow.propTypes = {
+  as: PropTypes.elementType,
+  decorate: PropTypes.bool,
+  className: PropTypes.string,
+  children: PropTypes.node,
+}
+
 // Ajout d'un nouveau composant pour les images
 Card.Image = function CardImage({ src, alt }) {
   return (
@@ -144,4 +176,9 @@ Card.Image = function CardImage({ src, alt }) {
       <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
     </div>
   )
+}
+
+Card.Image.propTypes = {
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
 }

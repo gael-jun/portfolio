@@ -43,7 +43,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html className="h-full scroll-smooth antialiased" lang="en">
+  <Html className="h-full scroll-smooth antialiased overflow-y-scroll" lang="en">
         <Head>
           <script dangerouslySetInnerHTML={{ __html: modeScript }} />
           <link
@@ -64,10 +64,10 @@ export default class MyDocument extends Document {
             href="/favicon-16x16.png"
           />
           <link rel="manifest" href="/site.webmanifest" />
-          <meta name="msapplication-TileColor" content="#000000" />
-          <meta name="theme-color" content="#000000" />
+          <meta name="msapplication-TileColor" content="#0f172a" />
+          <meta name="theme-color" content="#ffffff" />
         </Head>
-        <body className="flex h-full flex-col bg-primaryText-50 dark:bg-black">
+  <body className="flex h-full flex-col bg-primaryText-50 dark:bg-slate-900">
           <Main />
           <NextScript />
         </body>

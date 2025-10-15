@@ -34,3 +34,17 @@
 .slick-dots li.slick-active button:before {
   color: black;
 }
+
+/* Keep vertical scrollbar space reserved to avoid layout shift when navigating
+   Supported in modern browsers; fallback provided for others */
+@layer base {
+  html {
+    scrollbar-gutter: stable both-edges;
+  }
+  @supports not (scrollbar-gutter: stable) {
+    html {
+      /* Fallback to always show vertical scrollbar to prevent content shift */
+      overflow-y: scroll;
+    }
+  }
+}

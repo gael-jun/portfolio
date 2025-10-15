@@ -9,7 +9,7 @@ const CertificationCard = ({
 }) => {
   return (
     <motion.div
-      className="relative flex flex-col items-start p-6 pt-12 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-150 dark:to-gray-200 rounded-2xl shadow-lg hover:shadow-2xl transform transition-transform duration-300 hover:scale-105"
+      className="relative flex flex-col items-start p-6 pt-12 rounded-2xl shadow-lg hover:shadow-2xl transform transition-transform duration-300 hover:scale-105 bg-white/90 dark:bg-slate-900 ring-1 ring-black/5 dark:ring-white/10"
       whileHover={{ scale: 1.05 }}
       transition={{ type: 'spring', stiffness: 300 }}
     >

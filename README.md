@@ -1,89 +1,83 @@
-# ⚡️ Bienvenue sur mon ePortfolio  
+# 🌿 Portfolio — Tonde Ndebia Junior Gael
 
-[![Website](https://img.shields.io/website?url=https%3A%2F%2Ftonsite.vercel.app&up_color=green)](https://eportfolio-cedrick-tchakonte.vercel.app/)
-![Vercel](https://img.shields.io/badge/Hébergé%20sur-Vercel-black?logo=vercel)
-![Next.js](https://img.shields.io/badge/Framework-Next.js-blue?logo=next.js)
-![TypeScript](https://img.shields.io/badge/Code-TypeScript-informational?logo=typescript)
-![Status](https://img.shields.io/badge/Statut-En%20cours%20de%20développement-yellow)
-![Stars](https://img.shields.io/github/stars/CeGeek23/myeportfolio?style=social)
-![Forks](https://img.shields.io/github/forks/CeGeek23/myeportfolio?style=social)
-![License](https://img.shields.io/github/license/CeGeek23/myeportfolio?color=blue)
+![Next.js](https://img.shields.io/badge/Framework-Next.js-black?logo=next.js)
+![React](https://img.shields.io/badge/UI-React-61DAFB?logo=react&logoColor=white)
+![Tailwind](https://img.shields.io/badge/CSS-Tailwind-38B2AC?logo=tailwindcss&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Active-green)
+![License](https://img.shields.io/badge/License-MIT-blue)
 
----
-
-## 👋 Moi c’est Cedrick !
-
-> "*Pas besoin d’être un génie, il suffit d’être curieux.*"
-
-🎓 Je suis actuellement en 2ᵉ année à l’**ENSTA Paris**, une grande école d’ingénieurs, où je me spécialise progressivement dans les domaines qui me passionnent : **l’intelligence artificielle**, **la robotique**, et **les domaines de la tech** au sens large.  
-
-🧠 Mon parcours est celui d’un jeune curieux, qui cherche à comprendre le monde, à le rendre un peu plus simple, plus juste.
+Bienvenue sur mon ePortfolio. Je suis Junior Gael, étudiant en Master 2 d’Intelligence Artificielle à l’ENSIMAG (Grenoble INP). J’aime concevoir des systèmes intelligents et robustes, du modèle jusqu’au produit.
 
 ---
 
-## 🗺️ Pourquoi ce site ?
+## ✨ Ce que vous trouverez ici
 
-J’ai voulu créer ce portfolio comme une **extension numérique de moi-même** :  
-une vitrine honnête, vivante, évolutive — un espace où je raconte ce que je fais, ce que j’apprends, et pourquoi je le fais.
-
-### ✨ Vous y trouverez :
-
-- 🧬 **Des bouts de moi** – mon parcours, mes valeurs, mes intérêts
-- 🎓 **Mon chemin académique** – de l’école à l’ingénierie
-- 🚀 **Une roadmap** – mes objectifs à court et long terme
-- 🛠 **Mes projets** – personnels, associatifs, pro, etc.
-- 🌍 **Mes voyages** – car découvrir le monde, c’est aussi grandir
-- 🤖 **Un coin IA** – articles, idées, réflexions et expérimentations
+- À propos de moi (parcours, valeurs, centres d’intérêt)
+- Formation et mobilités internationales
+- Expériences professionnelles et réalisations
+- Projets (IA, systèmes, cloud, génie logiciel…)
+- Compétences et certifications
+- Contact
 
 ---
 
-## 🧰 Stack Technique
+## 🛠️ Stack technique
 
-Ce site est **fait maison**, avec beaucoup d’amour et un peu de café :
+| Tech            | Rôle                                       |
+|-----------------|--------------------------------------------|
+| Next.js (React) | Framework principal (SSR/SSG + Routing)    |
+| Tailwind CSS    | Styles modernes, responsives et accessibles |
+| Framer Motion   | Micro‑interactions et animations            |
+| Netlify         | Déploiement en production                   |
 
-| 🧩 Tech          | 💡 Rôle                              |
-|------------------|--------------------------------------|
-| **Next.js**      | Framework principal (React & SSR)    |
-| **Tailwind CSS** | Styling moderne, responsive et clean |
-| **TypeScript**   | Typage solide pour coder sereinement |
-| **Vercel**       | Déploiement facile et rapide         |
-| **Markdown**     | Pour les contenus dynamiques          |
-
----
-
-## 👀 Aperçu rapide
-
-| Section        | Description rapide                                            |
-|----------------|--------------------------------------------------------------|
-| **À propos**   | Qui je suis, ce qui m’anime                                   |
-| **Formation**  | Mes études, mes choix d’orientation                          |
-| **Projets**    | Ce que j’ai construit, en solo ou en équipe                  |
-| **Roadmap**    | Mes objectifs d’évolution (et mes rêves un peu fous)         |
-| **Blog IA**    | Ma passion pour l’IA expliquée de façon accessible           |
-| **Voyages**    | Carnets de bord de mes déplacements (échanges, stages, etc.) |
+Le code est majoritairement en JavaScript (JSX) avec une architecture simple: `pages/`, `components/`, `data/`, `public/`.
 
 ---
 
-## 🤝 Ce que je cherche
+## � Structure des sections
 
-Je suis **ouvert aux collaborations, aux discussions, aux idées.**  
-Si tu veux parler IA, startup, stage de césure ou de PFE, ou juste prendre un café virtuel pour échanger : [->écris-moi !<-](https://eportfolio-cedrick-tchakonte.vercel.app/contact)
-
-> Je suis à la recherche de stages / projets pour approfondir mes compétences, découvrir de nouveaux univers et faire de la tech **utile** et **humaine**.
-
----
-
-## 📫 Me contacter
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profil-blue?logo=linkedin&style=flat-square)](www.linkedin.com/in/cedrick-tchakonte)
-[![Gmail](https://img.shields.io/badge/Email-Me%20contacter-D14836?logo=gmail&logoColor=white)](mailto:tchakontecedrick@gmail.com)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Mon%20site-black?style=flat-square)](https://eportfolio-cedrick-tchakonte.vercel.app/contact)
+- Home: présentation, liens sociaux, mise en avant
+- Education: parcours académique (double diplôme, ENSIMAG, ENSPY, INP‑HB…)
+- Experience: stages et réalisations (ex: E‑Aubonne)
+- Projects: sélection de projets avec liens GitHub et, si applicable, rapports PDF
+- Certifications: badges, vérifications, et compétences clés
+- International Mobility: Grenoble, Yamoussoukro, Yaoundé, Douala
+- Skills & Contact: compétences, coordonnées et réseaux
+- About: portrait et texte personnalisé
 
 ---
 
-## 🌟 Merci !
+## 🚀 Démarrer en local
 
-Merci d’avoir pris le temps de visiter mon petit coin du web.  
-Si quelque chose vous a interpellé, touché, inspiré — même un détail — n’hésitez pas à me le dire 🙏
+Prérequis: Node.js 18+ et npm.
 
-Et si vous aimez le projet, laissez une ⭐ sur le repo ! Ça fait toujours plaisir 😄
+1. Installer les dépendances
+	- `npm install`
+2. Lancer le serveur de dev
+	- `npm run dev`
+3. Ouvrir le site
+	- http://localhost:3000
+
+Build & production:
+- `npm run build` puis `npm start`
+
+
+
+## � Contact
+
+- GitHub: https://github.com/gael-jun
+- LinkedIn: https://www.linkedin.com/in/tonde-ndebia-junior-gael-581950260
+- Email: ndebiagaeljunior@gmail.com
+- Telephone : 0759519289
+
+Si vous voulez échanger sur l’IA, les systèmes, le cloud ou une opportunité de collaboration, écrivez‑moi.
+
+---
+
+## 📝 Licence
+
+Ce projet est sous licence MIT — voir `LICENSE.md`.
+
+---
+
+Merci pour votre visite. Si le projet vous plaît, une ⭐️ sur le repo fait toujours plaisir !

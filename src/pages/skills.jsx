@@ -2,8 +2,8 @@ import Head from 'next/head'
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import siteMetadata from '@/data/siteMetadata'
-import { FaPython, FaJava, FaGitAlt, FaLinux, FaHtml5, FaJs, FaCss3Alt, FaAws, FaNodeJs, FaReact } from 'react-icons/fa'
-import { SiSpringboot, SiNextdotjs, SiApachecassandra, SiPycharm, SiVisualstudio, SiCplusplus, SiTensorflow, SiPytorch, SiJupyter, SiMongodb, SiPostgresql, SiRos, SiScikitlearn, SiNumpy, SiPandas, SiOpencv, SiAnaconda, SiVisualstudiocode, SiEclipseide, SiIntellijidea, SiAzuredevops, SiGooglecloud, SiSpringsecurity } from 'react-icons/si'
+import { FaPython, FaJava, FaGitAlt, FaLinux, FaHtml5, FaJs, FaCss3Alt, FaAws, FaNodeJs, FaReact, FaDocker, FaGithub } from 'react-icons/fa'
+import { SiSpringboot, SiNextdotjs, SiApachecassandra, SiPycharm, SiVisualstudio, SiCplusplus, SiTensorflow, SiPytorch, SiJupyter, SiMongodb, SiPostgresql, SiRos, SiScikitlearn, SiNumpy, SiPandas, SiOpencv, SiAnaconda, SiVisualstudiocode, SiEclipseide, SiIntellijidea, SiAzuredevops, SiGooglecloud, SiSpringsecurity, SiFlutter } from 'react-icons/si'
 
 const skills = [
   {
@@ -15,6 +15,7 @@ const skills = [
       { name: 'JavaScript', icon: FaJs },
       { name: 'HTML5', icon: FaHtml5 },
       { name: 'CSS3', icon: FaCss3Alt },
+      { name: 'Flutter', icon: SiFlutter },
     ],
   },
   {
@@ -26,7 +27,6 @@ const skills = [
       { name: 'Scikit-Learn', icon: SiScikitlearn },
       { name: 'NumPy', icon: SiNumpy },
       { name: 'Pandas', icon: SiPandas },
-      { name: 'Jupyter', icon: SiJupyter },
       { name: 'OpenCV', icon: SiOpencv },
     ],
   },
@@ -49,6 +49,8 @@ const skills = [
     category: 'Development Tools',
     items: [
       { name: 'Git', icon: FaGitAlt },
+      { name: 'GitHub Actions', icon: FaGithub },
+      { name: 'Docker', icon: FaDocker },
       { name: 'Linux', icon: FaLinux },
       { name: 'Anaconda', icon: SiAnaconda },
       { name: 'VS Code', icon: SiVisualstudiocode },

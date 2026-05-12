@@ -8,15 +8,27 @@ import ExperienceCard from '@/components/ExperienceCard'
 
 const experiences = [
   {
+    title: 'Final Year Internship – AI Plugin Development',
+    company: 'STMicroelectronics',
+    date: 'Feb 2026 – Aug 2026',
+    description: [
+      'Design and development of AI plugins for Smart3 metrology software (image segmentation with SAM, autorotation – 97% success rate, automatic report generation).',
+      'PoC + ROI analysis for each plugin delivered.',
+      'Stack: Python, PyTorch, Computer Vision, Jira, Agile, Proofs of Concept (PoC).',
+    ],
+    location: 'Crolles, France',
+    logo: '/images/STMicro.png',
+  },
+  {
     title: 'AI/Software Engineering Intern',
     company: 'E-Aubonne',
     date: 'Jun 2025 - Aug 2025',
     description: [
       'Theme: Design, development, and integration of a unified photovoltaic energy–finance module (Grid, Off‑Grid, Tracker) into E‑Aubonne’s solar study tool.',
       'PV production estimates via PVGIS API with graphs matching PVGIS/AutoCalSol (validated on a historical client dataset).',
-      'Automated PDF/CSV report generation; preparation process reduced to 2 steps.',
-      'Financial indicators implemented (NPV, annual cash‑flow, payback) with tests;',
-      ' Quality of the code: 84% JaCoCo coverage and A grades on SonarQube (maintainability, security).',
+      'Automated PDF/CSV report generation; preparation process reduced by 3 steps.',
+      'Financial indicators implemented (NPV, annual cash‑flow, payback) with 71 unit tests (personal initiative);',
+      ' Quality of the code: 92% JaCoCo coverage and A grades on SonarQube (maintainability, security).',
     ],
     location: 'Eaubonne, France',
   link: { url: '/pdf/Rapport_EAubonne.pdf', label: 'Open internship report (PDF)', isButton: true },

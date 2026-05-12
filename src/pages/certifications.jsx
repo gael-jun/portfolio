@@ -5,6 +5,15 @@ import siteMetadata from '@/data/siteMetadata'
 
 // Certifications (translated to English)
 const certifications = [
+  {
+    name: 'Agentic AI',
+    issuer: 'Coursera',
+    date: '2025',
+    description:
+      'Specialization covering the design and deployment of autonomous AI agents: multi-agent systems, tool use, planning, and orchestration frameworks (CrewAI, LangChain).',
+    logo: '/images/deepLearning.ai.png',
+    tags: ['Agentic AI', 'LLMs', 'Multi-Agent', 'CrewAI', 'LangChain'],
+  },
    {
     name: 'Deep Learning Specialization',
     issuer: 'deeplearning.ai | Coursera',

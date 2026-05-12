@@ -13,6 +13,25 @@ import payByFonieLogo from '@/images/projects/payByFonie.svg'
 // Custom projects; logos are in src/images/projects
 const projectsData = [
   {
+    title: 'US Visa Approval Prediction – MLOps',
+    description:
+      'Complete MLOps pipeline: Kaggle data ingestion → MongoDB → training → cloud deployment. Docker containerization, AWS deployment (ECR + EC2) with GitHub Actions CI/CD. Includes data drift monitoring with Evidently AI and a live demo.',
+    logo: bananaLogo,
+    href: 'https://github.com/gael-jun/MLOPs_US_Visa_Project',
+    category: 'MLOps / Cloud',
+    skills: [
+      'Python',
+      'MongoDB',
+      'Docker',
+      'AWS (ECR + EC2)',
+      'GitHub Actions',
+      'Evidently AI',
+      'Scikit-learn',
+      'Hugging Face',
+      'ETL',
+    ],
+  },
+  {
     title: 'PPE Detection with YOLO',
     description:
       'Personal Protective Equipment (PPE) detection (helmet, vest, etc.) using YOLO with real-time inference. Trained on an annotated dataset; achieved ~92% mAP on validation. Includes alerting logic when PPE is missing in sensitive areas.',

@@ -7,7 +7,7 @@ const siteMetadata = {
   author: 'Tonde Ndebia Junior Gael',
   authorHeadline: 'Final year Information Systems Engineering student | Master Degree in Artificial intelligence at ENSIMAG',
   authorAbout:
-    "Hi, I'm Junior Gael, a computer science student focusing on AI. I enjoy building intelligent systems and solving real problems with data and code. I am currently seeking a 6‑month end‑of‑studies internship in Artificial Intelligence starting February 2026.",
+    "Hi, I'm Junior Gael, a Graduate Computer Engineering student at ENSIMAG (1st computer science engineering school in France) specializing in AI. I enjoy building intelligent systems and solving real problems with data and code. I am currently seeking a full‑time position starting September 2026.",
   authorAboutExtended:
     "Currently studying at ENSIMAG, I focus on AI and its applications. I’m passionate about tackling practical projects, learning new tools, and collaborating to deliver meaningful impact.",
   socials: {

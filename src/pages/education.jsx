@@ -7,7 +7,7 @@ import siteMetadata from '@/data/siteMetadata'
 // Dates use month abbreviations in English; adjust if you prefer another format.
 const educationBackground = [
   {
-    degree: 'Master 2 in Artificial Intelligence & 3rd Year Information Systems Engineering (Double Degree)',
+    degree: 'Master 2 in Artificial Intelligence & 3rd Year Information Systems ENGINEERING (Double Degree)',
     institution: 'Grenoble INP – ENSIMAG, Grenoble (France)',
     logo: '/images/logo/ensimag.png',
     startDate: 'Sep 2025',
@@ -26,7 +26,7 @@ const educationBackground = [
     institution: 'Grenoble INP – ENSIMAG (with ENSPY)',
     logo: '/images/logo/ensimag.png',
     startDate: 'Sep 2024',
-    endDate: 'Jul 2025 (to confirm)',
+    endDate: 'Jul 2025',
     description:
       'Entry into the ENSIMAG–ENSPY double degree. Consolidation of advanced software architecture, algorithms, optimization and distributed systems foundations.',
     highlights: [

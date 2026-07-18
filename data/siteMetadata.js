@@ -5,7 +5,7 @@ const siteMetadata = {
   description:
     'Welcome to my personal portfolio. I am a computer science major with a passion for AI.',
   author: 'Tonde Ndebia Junior Gael',
-  authorHeadline: 'Final year Information Systems Engineering student | Master Degree in Artificial Intelligence at ENSIMAG | Proven skills in AI and Data Engineering',
+  authorHeadline: 'Information Systems Engineering | Master Degree in Artificial Intelligence at ENSIMAG ',
   authorAbout:
     "Hi, I'm Junior Gael, a Graduate Computer Engineering student at ENSIMAG (1st computer science engineering school in France) specializing in AI, with proven skills in AI and data engineering (MLOps, cloud, LLMs, AI Agents). I enjoy building intelligent systems and solving real problems with data and code. I am currently on a final internship at STMicroelectronics (Feb–Aug 2026), and seeking a full‑time position starting September 2026.",
   authorAboutExtended:

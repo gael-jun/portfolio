@@ -6,6 +6,15 @@ import siteMetadata from '@/data/siteMetadata'
 // Certifications (translated to English)
 const certifications = [
   {
+    name: 'Build AI Agents with MCP',
+    issuer: 'Pearson | LinkedIn Learning',
+    date: '2026',
+    description:
+      'Hands-on course on building autonomous AI agents using the Model Context Protocol (MCP): tool integration, agent orchestration, and practical deployment patterns.',
+    logo: '/images/deepLearning.ai.png',
+    tags: ['AI Agents', 'MCP', 'LLMs'],
+  },
+  {
     name: 'Agentic AI',
     issuer: 'Coursera',
     date: '2025',

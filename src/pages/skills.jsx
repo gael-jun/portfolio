@@ -2,8 +2,8 @@ import Head from 'next/head'
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import siteMetadata from '@/data/siteMetadata'
-import { FaPython, FaJava, FaGitAlt, FaLinux, FaHtml5, FaJs, FaCss3Alt, FaAws, FaNodeJs, FaReact, FaDocker, FaGithub } from 'react-icons/fa'
-import { SiSpringboot, SiNextdotjs, SiApachecassandra, SiPycharm, SiVisualstudio, SiCplusplus, SiTensorflow, SiPytorch, SiJupyter, SiMongodb, SiPostgresql, SiRos, SiScikitlearn, SiNumpy, SiPandas, SiOpencv, SiAnaconda, SiVisualstudiocode, SiEclipseide, SiIntellijidea, SiAzuredevops, SiGooglecloud, SiSpringsecurity, SiFlutter } from 'react-icons/si'
+import { FaPython, FaJava, FaGitAlt, FaLinux, FaHtml5, FaJs, FaCss3Alt, FaAws, FaNodeJs, FaReact, FaDocker, FaGithub, FaRProject } from 'react-icons/fa'
+import { SiSpringboot, SiNextdotjs, SiApachecassandra, SiPycharm, SiVisualstudio, SiCplusplus, SiTensorflow, SiPytorch, SiJupyter, SiMongodb, SiPostgresql, SiRos, SiScikitlearn, SiNumpy, SiPandas, SiOpencv, SiAnaconda, SiVisualstudiocode, SiEclipseide, SiIntellijidea, SiAzuredevops, SiGooglecloud, SiSpringsecurity, SiFlutter, SiOpenai, SiChainlink, SiNeo4J, SiApachehadoop, SiPowerbi, SiDjango } from 'react-icons/si'
 
 const skills = [
   {
@@ -13,6 +13,7 @@ const skills = [
       { name: 'C++', icon: SiCplusplus },
       { name: 'Java', icon: FaJava },
       { name: 'JavaScript', icon: FaJs },
+      { name: 'R', icon: FaRProject },
       { name: 'HTML5', icon: FaHtml5 },
       { name: 'CSS3', icon: FaCss3Alt },
       { name: 'Flutter', icon: SiFlutter },
@@ -31,6 +32,15 @@ const skills = [
     ],
   },
   {
+    category: 'AI Agents & LLM Frameworks',
+    items: [
+      { name: 'LangChain', icon: SiChainlink },
+      { name: 'OpenAI', icon: SiOpenai },
+      { name: 'CrewAI', icon: SiOpenai },
+      { name: 'Evidently AI', icon: SiScikitlearn },
+    ],
+  },
+  {
     category: 'Robotics',
     items: [
       { name: 'Arduino/Raspberry', icon: SiRos },
@@ -42,7 +52,16 @@ const skills = [
       { name: 'PostgreSQL', icon: SiPostgresql },
       { name: 'MongoDB', icon: SiMongodb },
       { name: 'Cassandra', icon: SiApachecassandra },
+      { name: 'Neo4j', icon: SiNeo4J },
+      { name: 'SQL/NoSQL', icon: SiPostgresql },
 
+    ],
+  },
+  {
+    category: 'Data Engineering',
+    items: [
+      { name: 'Hadoop', icon: SiApachehadoop },
+      { name: 'Power BI', icon: SiPowerbi },
     ],
   },
   {
@@ -76,6 +95,7 @@ const skills = [
       { name: 'Next.JS', icon: SiNextdotjs },
       { name: 'SpringBoot', icon: SiSpringboot },
       { name: 'Spring-Security', icon: SiSpringsecurity },
+      { name: 'Django', icon: SiDjango },
     ],
   },
 ]

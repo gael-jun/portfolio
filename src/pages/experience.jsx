@@ -12,9 +12,10 @@ const experiences = [
     company: 'STMicroelectronics',
     date: 'Feb 2026 – Aug 2026',
     description: [
-      'Design and development of AI plugins for Smart3 metrology software (image segmentation with SAM, autorotation – 97% success rate, automatic report generation).',
-      'PoC + ROI analysis for each plugin delivered.',
-      'Stack: Python, PyTorch, Computer Vision, Jira, Agile, Proofs of Concept (PoC).',
+      'Design and development of AI plugins for Smart3 metrology software: image segmentation (SAM), auto‑rotation (97% accuracy), and automated report generation.',
+      'PoC + ROI analysis delivered for each plugin.',
+      'Fine‑tuned LLMs and vision models (SAM3), achieving 89% precision (IoU); ongoing training on AI Agents.',
+      'Stack: Python, PyTorch, Computer Vision, Jira, Agile, PoCs, LLMs, AI Agents.',
     ],
     location: 'Crolles, France',
     logo: '/images/STMicro.png',
